@@ -3,7 +3,21 @@ function pigLatin(array) {
     return array.concat('a','y');
   } else if (array[0] + array[1] === "qu") {
     return array.slice(2).concat("q", "u", "a", "y");
-  } 
+  } else {
+    let tempArray = [];
+
+    for(let x=0; x<array.length; x++){
+
+      if(array[x] ==='a' || array[x] =='e' || array[x] ==='i' || array[x] ==='o' || array[x] ==='u'){
+        // let newWord = tempArray.slice(x)
+        // newWord = newWord.join("")+newString+'ay'
+        // return newWord
+   
+      } 
+
+      array[x] += tempArray;
+}
+}
 }
 
 function convertToArray(string) {
@@ -27,8 +41,5 @@ $( document ).ready(function() {
     const inputArrayValue = convertToArray(noErrors);
     const pigLatinTranslated = pigLatin(inputArrayValue);
 
-
-    console.log(pigLatinTranslated);
   });
 });
-
